@@ -1,90 +1,289 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <!-- See: Unicode character table for utf-8-->
-    <meta charset="utf-8">
-    <title> Jouni's personal site </title>
-  </head>
-  <body  style="background-color:#1a0d12;">
-    <!-- /Users/jounirantanen/Pictures/Jouni.png -->
-    <!-- Use Phototobucket to get a URL for the image.-->
-    <table cellspacing="20">
-      <tr>
-        <td><img src="Jouni Profile Image.png" alt="Jouni Rantanen profile picture."></td>
-        <td>
-          <h1 style="color:;"> Jouni Rantanen </h1>
-           <p style="color:#f1efc7;"> <em> Founder and CEO of <strong>JR Inc.</strong><em> </p>
-           <p style="color:#f1efc7;"> I am an iOS and web developer. </p>
-        </td>
-      </tr>
-    </table>
-    <br>
-     <!-- Notice hr color attribute -->
-     <hr color="#f1efc7">
-     <br>
-     <h3 style="color:#f1efc7;"> <st> Education </st> </h3>
-     <!-- Unordered list ul , ordered list ol-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Site Of Jouni Rantanen</title>
+    <link rel="icon" href="favicon.ico">
 
-     <ul style="color:#f1efc7;">
-       <!-- List item -->
-       <li> <a style="color:#f1efc7;" href="https://www.utu.fi/fi">University of Turku</a> - Classics</li>
-       <li>  <a style="color:#f1efc7;" href="https://www.helsinki.fi/fi">University of Helsinki</a> - Computer Science</li>
-       <li> <a style="color:#f1efc7;" href="https://www.aalto.fi/fi">Aalto University</a> - Electronics</li>
-     </ul>
-     <h3 style="color:#f1efc7"> Work Experience </h3>
-     <!-- -Create a table for the work experience. -->
-     <table style="color:#f1efc7;" border="1">
-       <thead> <!-- Table head -->
-         <tr>
-           <th>Dates</th>
-           <th>Work</th>
-         </tr>
-       </thead>
-       <tbody> <!-- Table body-->
-         <tr>  <!-- Table row tr-->
-           <td>2011-current</td> <!-- Table data td-->
-           <td>Founder and CEO of Cheap</td>
-         </tr>
-         <tr>
-           <td >1997-2011</td>
-           <td>Head designer at Jouni's Design</td>
-         </tr>
-         <tr>
-           <td>1981-current</td>
-           <td>Executive chairman and CEO of JR Inc.</td>
-         </tr>
-       </tbody>
-       <tfoot> <!-- Table footer -->
-       </tfoot>
-     </table>
-     <br>
-     <hr color="#f1efc7">
-     <h3 style="color:#f1efc7;" cellspacing="20">Skills</h3>
-     <table style="color:#f1efc7;" cellspacing="10">
-       <thead>
-       </thead>
-       <tbody>
-         <tr>
-           <td>iOS Development</td>
-           <td>★★★★★</td>
-         </tr>
-         <tr>
-           <td>Web Development</td>
-           <td>★★★★★</td>
-         </tr>
-         <tr>
-           <td>Sketching</td>
-           <td>★★★★★</td>
-         </tr>
-       </tbody>
-       <tfoot>
-       </tfoot>
-     </table>
-     <br>
-     <hr color="#f1efc7">
-     <br>
-     <a style="color:#f1efc7;" href="hobbies.html">My hobbies</a>
-     <br>
-     <a style="color:#f1efc7;" href="contact-me.html">Contact</a>
+    <!-- NOTE: <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+
+    <style>
+
+      h1 {
+        color: #255AD9;
+        /*font-size: 562.5%; /* NOTE: 100% = 1 em = 16px */
+        font-size: 5.625rem; /* NOTE: rem is not affected by changes and inheritance */
+        margin: 50px auto 0 auto;
+        font-family: 'Sacramento', cursive;
+      }
+
+      h2 {
+        color: rgb(96,152,255);
+        /* NOTE: color: #255AD9; */
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        font-weight: normal;
+
+      }
+
+      h3 {
+        color: rgb(96,152,255);
+        /* NOTE: color: #255AD9; */
+        font-size: 1.5rem;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      p {
+        font-size: 1.5rem;
+        line-height: 2;
+      }
+
+      body {
+        background: rgb(96,152,255);
+        color: white;
+        margin: 0;
+        text-align: center;
+        font-family: "Merriweather", serif;
+        overflow-x: hidden;
+      }
+
+      section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 400px;
+        padding-top: 100px;
+      }
+
+      a {
+        color: rgb(96,152,255);
+        font-family: 'Montserrat', sans-serif;
+        margin: 10px 20px;
+        text-decoration: none;
+      }
+
+      /* NOTE: Change the color of the link in hover state */
+      a:hover {
+        color: #EAF6F6;
+      }
+
+      hr {
+        border: dotted #EAF6F6 6px;
+        border-bottom: none;
+        width: 4%;
+        margin: 100px auto;
+      }
+
+      .contact-message {
+        width: 40%;
+        margin: 40px auto 60px;
+      }
+
+      /* SVG background image via https://haikei.app/ */
+      .spacer {
+        /* Use the aspect ratio of the svg-image */
+        aspect-ratio: 960/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .layer1 {
+        /* NOTE: background-image: url('./layer1.svg'); */
+        background-image: url('curves/stacked-waves-haikei-blue.svg');
+      }
+      .layer2 {
+        /* NOTE: background-image: url('./layer2.svg'); */
+        background-image: url('curves/stacked-waves-haikei-blue1.svg');
+      }
+
+      .layer3 {
+        background-image: url('curves/stacked-waves-haikei-blue2.svg');
+      }
+
+      .flip {
+        transform: rotate(180deg);
+      }
+      /* ----- */
+
+      /* Different sections .*/
+
+      /* Top */
+      .top {
+        background: rgb(96,152,255);
+        position: relative;
+        padding-top: 100px;
+      }
+
+      .top-h2 {
+        color: #255AD9;
+      }
+
+      .top-cloud {
+        position: absolute;
+        /* position: fixed; */
+        right: 300px;
+        top: 40px;
+      }
+
+      .bottom-cloud {
+        position: absolute;
+        /* position: fixed; */
+        left: 170px;
+        bottom: 340px;
+      }
+      /* ----- */
+
+      /* Middle */
+
+      .middle {
+        background: rgb(0,76,187);
+        /* margin: 100px 0; */
+      }
+
+      .skill-row {
+        width: 50%;
+        /*margin: 100px auto 100px auto;*/
+        margin: auto;
+        /*text-align: left;*/
+      }
+      /* ----- */
+
+      /* Bottom */
+      .bottom {
+        background: rgb(96,152,255);
+        padding: 20px 0 20px;
+      }
+
+      .get-in-touch {
+        color: #255AD9;
+      }
+      /* ----- */
+
+      /* ----- */
+
+      /* The footer box */
+      .bottom-container {
+        background-color: rgb(1,48,117);
+        padding:20px 0 20px;
+        min-height: 80px;
+        padding-top: 30px;
+      }
+
+      .footer-link {
+        color: rgb(96,152,255);
+      }
+
+      .copyright {
+        color: #EAF6F6;
+        font-size: 0.75rem;
+        margin: 10px 0;
+      }
+      /* ----- */
+
+      /* Button */
+      .btn {
+        background: #023075;
+        background-image: -webkit-linear-gradient(top, #023075, #004CBB);
+        background-image: -moz-linear-gradient(top, #023075, #004CBB);
+        background-image: -ms-linear-gradient(top, #023075, #004CBB);
+        background-image: -o-linear-gradient(top, #023075, #004CBB);
+        background-image: linear-gradient(to bottom, #023075, #004CBB);
+        -webkit-border-radius: 20;
+        -moz-border-radius: 20;
+        border-radius: 20px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 15px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+      }
+
+    .btn:hover {
+        background: #2D77FF;
+        background-image: -webkit-linear-gradient(top, #2D77FF, #4988FF);
+        background-image: -moz-linear-gradient(top, #2D77FF, #4988FF);
+        background-image: -ms-linear-gradient(top, #2D77FF, #4988FF);
+        background-image: -o-linear-gradient(top, #2D77FF, #4988FF);
+        background-image: linear-gradient(to bottom, #2D77FF, #4988FF);
+        text-decoration: none;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <section class="top">
+      <img class="top-cloud" src="images/cloud.png" alt="An image of a cloud.">
+      <h1> I'm Jouni </h1>
+        <!-- NOTE:   <h2> I am a programmer and a designer. </h2>  -->
+        <h2 class="top-h2"> I enjoy planning for the betterment of all mankind </h2>
+      <img class="bottom-cloud" src="images/cloud.png" alt="An image of a cloud.">
+    </section>
+
+    <div class="spacer layer1"></div>
+
+    <section class="middle">
+      <div class="middle-container">
+        <div class="profile">
+          <img src="selfies/CV_1.png" alt="Cartoon profile image of me.">
+          <h2>Hello.</h2>
+          <p class="intro">"I am one of the roughs, a kosmos."</p>
+          <p class="intro">My long-term goal is to become a goalkeeper.</p>
+        </div>
+        <hr>
+        <div class="skills">
+          <h2>My Skills.</h2>
+          <div class="skill-row">
+            <img class="" src="" alt="">
+            <h3>(We Don't Neeed No) Education</h3>
+              <p><a href="https://www.utu.fi/fi">University of Turku</a>  Classics</p>
+              <p><a href="https://www.helsinki.fi/fi">University of Helsinki</a>  Computer Science</p>
+              <p><a href="https://www.aalto.fi/fi">Aalto University</a>  Electronics</p>
+          </div>
+          <div class="skill-row">
+            <img class="" src="" alt="">
+            <h3>Work Experience</h3>
+              <p>1981-present</p>
+              <p>Executive Chairman and CEO</p>
+              <p>The Life And Opinions Of Jouni Rantanen, A Gentleman</p>
+          </div>
+        </div>
+        <hr>
+        </div>
+    </section>
+
+    <div class="spacer layer2 flip"></div>
+
+    <section class="bottom">
+      <div class="contact-me">
+        <h2 class="get-in-touch">Get In Touch</h2>
+        <h3 class="get-in-touch">If you are not just sleeping and dreaming of the moon.</h3>
+        <p>Let's talk about how we can improve things and make everything work for us and all of our friends.</p>
+        <hr>
+        <br>
+        <a class="btn" href="mailto:jouni.j.rantanen@gmail.com">CONTACT ME</a>
+        <!-- NOTE: <br><br><br><br> -->
+      </div>
+    </section>
+
+    <div class="spacer layer3"></div>
+
+    <section class="bottom-container">
+      <div>
+        <a class="footer-link" href="https://www.linkedin.com/in/jouni-rantanen-855638194/">LinkedIn</a>
+        <!-- NOTE:  <a class="footer-link" href="https://twitter.com/">Twitter</a>-->
+        <!-- NOTE: <a class="footer-link" href="https://www.appbrewery.co/">Website</a> -->
+        <p class="copyright">© Jouni Rantanen</p>
+      </div>
+
+    </section>
   </body>
 </html>
