@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- NOTE:  https://jouniverse.github.io/cv/ -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,9 +9,16 @@
     <link rel="icon" href="favicon.ico">
 
     <!-- NOTE: <link rel="stylesheet" href="css/styles.css"> -->
+    <!--
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Sacramento', cursive;
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
 
+    <!-- NOTE: CSS stylesheet -->
     <style>
 
       h1 {
@@ -40,10 +48,11 @@
       p {
         font-size: 1.5rem;
         line-height: 2;
+        font-family: 'Montserrat', sans-serif;
       }
 
       body {
-        background: rgb(96,152,255);
+        background-color: rgb(0,76,187);
         color: white;
         margin: 0;
         text-align: center;
@@ -126,17 +135,19 @@
       }
 
       .top-cloud {
-        position: absolute;
-        /* position: fixed; */
-        right: 300px;
+        /* position: absolute;*/
+        position: fixed;
+        right: 200px;
         top: 40px;
+        z-index: 1;
       }
 
       .bottom-cloud {
-        position: absolute;
-        /* position: fixed; */
-        left: 170px;
-        bottom: 340px;
+        /*position: absolute;*/
+        position: fixed;
+        left: 160px;
+        bottom: 450px;
+        z-index: 1;
       }
       /* ----- */
 
@@ -215,53 +226,79 @@
         text-decoration: none;
       }
 
+
+      /* NOTE: Add link to work experience?  */
+      .book-title {
+        color: #EAF6F6;
+        font-size: 1.5rem;
+        line-height: 2;
+      }
+
+      .book-title:hover {
+        color: #2D77FF;
+      }
+
+      .hobbies {
+        margin: 20px auto;
+      }
+
+
     </style>
   </head>
 
   <body>
-
+    <!-- NOTE: Top section. -->
     <section class="top">
-      <img class="top-cloud" src="images/cloud.png" alt="An image of a cloud.">
+      <img class="top-cloud" src="images/cloud_paint.png" alt="An image of a cloud.">
       <h1> I'm Jouni </h1>
-        <!-- NOTE:   <h2> I am a programmer and a designer. </h2>  -->
         <h2 class="top-h2"> I enjoy planning for the betterment of all mankind </h2>
-      <img class="bottom-cloud" src="images/cloud.png" alt="An image of a cloud.">
+      <img class="bottom-cloud" src="images/cloud_paint.png" alt="An image of a cloud.">
     </section>
 
     <div class="spacer layer1"></div>
 
+    <!-- NOTE: MIddle section. -->
     <section class="middle">
       <div class="middle-container">
         <div class="profile">
           <img src="selfies/CV_1.png" alt="Cartoon profile image of me.">
-          <h2>Hello.</h2>
+          <h2>Hello</h2>
           <p class="intro">"I am one of the roughs, a kosmos."</p>
           <p class="intro">My long-term goal is to become a goalkeeper.</p>
         </div>
         <hr>
         <div class="skills">
-          <h2>My Skills.</h2>
-          <div class="skill-row">
-            <img class="" src="" alt="">
-            <h3>(We Don't Neeed No) Education</h3>
-              <p><a href="https://www.utu.fi/fi">University of Turku</a>  Classics</p>
-              <p><a href="https://www.helsinki.fi/fi">University of Helsinki</a>  Computer Science</p>
-              <p><a href="https://www.aalto.fi/fi">Aalto University</a>  Electronics</p>
+          <h2>My Skills</h2>
+            <div class="skill-row">
+              <img class="" src="" alt="">
+              <h3>(We Don't Neeed No) Education</h3>
+                <p><a href="https://www.utu.fi/fi">University of Turku</a>  Classics</p>
+                <p><a href="https://www.helsinki.fi/fi">University of Helsinki</a>  Computer Science</p>
+                <p><a href="https://www.aalto.fi/fi">Aalto University</a>  Electronics</p>
+            </div>
+            <div class="skill-row">
+              <img class="" src="" alt="">
+              <h3>Work Experience</h3>
+                <p>1981-present</p>
+                <p>Executive Chairman and CEO</p>
+                <!-- NOTE:  <p>The Life And Opinions Of Jouni Rantanen, Gentleman</p>-->
+                <p> <a class="book-title" href="https://play.google.com/books/reader?id=UOBRAQAAMAAJ&pg=GBS.PP1">The Life And Opinions Of Jouni Rantanen, Gentleman</a></p>
+            </div>
+            <br>
+            <hr class="hobbies">
+            <div class="skill-row">
+              <img class="" src="" alt="">
+              <h3>My Hobbies</h3>
+                <a href="hobbies.html">iPad Sketching</a>
+            </div>
+            <br>
           </div>
-          <div class="skill-row">
-            <img class="" src="" alt="">
-            <h3>Work Experience</h3>
-              <p>1981-present</p>
-              <p>Executive Chairman and CEO</p>
-              <p>The Life And Opinions Of Jouni Rantanen, A Gentleman</p>
-          </div>
-        </div>
-        <hr>
         </div>
     </section>
 
     <div class="spacer layer2 flip"></div>
 
+    <!-- NOTE: Bottom section. -->
     <section class="bottom">
       <div class="contact-me">
         <h2 class="get-in-touch">Get In Touch</h2>
@@ -276,12 +313,19 @@
 
     <div class="spacer layer3"></div>
 
+    <!-- NOTE: Bottom container. -->
     <section class="bottom-container">
       <div>
         <a class="footer-link" href="https://www.linkedin.com/in/jouni-rantanen-855638194/">LinkedIn</a>
         <!-- NOTE:  <a class="footer-link" href="https://twitter.com/">Twitter</a>-->
         <!-- NOTE: <a class="footer-link" href="https://www.appbrewery.co/">Website</a> -->
-        <p class="copyright">© Jouni Rantanen</p>
+        <p class="copyright">
+          © Jouni Rantanen
+            <script type="text/javascript">
+              var thedate = new Date();
+              document.write(thedate.getFullYear());
+            </script>
+        </p>
       </div>
 
     </section>
