@@ -39,7 +39,7 @@
       }
 
       h3 {
-        color: rgb(96,152,255);
+        color: #6098ff;
         /* NOTE: color: #255AD9; */
         font-size: 1.5rem;
         font-family: 'Montserrat', sans-serif;
@@ -52,7 +52,8 @@
       }
 
       body {
-        background-color: rgb(0,76,187);
+        background-color: background-color: rgb(96 152 255);
+        /* NOTE: background-color: rgb(0,76,187); */
         color: white;
         margin: 0;
         text-align: center;
@@ -146,7 +147,7 @@
         /*position: absolute;*/
         position: fixed;
         left: 160px;
-        bottom: 450px;
+        bottom: 350px;
         z-index: 1;
       }
       /* ----- */
@@ -214,6 +215,8 @@
         font-size: 15px;
         padding: 10px 20px 10px 20px;
         text-decoration: none;
+        /* NOTE: Add box shadow */
+        /* NOTE: box-shadow: 0px 0px 12px 1px #ffffff; */
       }
 
     .btn:hover {
@@ -224,6 +227,8 @@
         background-image: -o-linear-gradient(top, #2D77FF, #4988FF);
         background-image: linear-gradient(to bottom, #2D77FF, #4988FF);
         text-decoration: none;
+        /* NOTE: Add box shadow*/
+        /* NOTE: box-shadow: 0px 0px 0px 0px #ffffff; */
       }
 
 
@@ -249,10 +254,10 @@
   <body>
     <!-- NOTE: Top section. -->
     <section class="top">
-      <img class="top-cloud" src="images/cloud_paint.png" alt="An image of a cloud.">
+      <img id="top_cloud" onclick="hideImageTop()" class="top-cloud" src="images/cloud_paint.png" alt="An image of a cloud.">
       <h1> I'm Jouni </h1>
         <h2 class="top-h2"> I enjoy planning for the betterment of all mankind </h2>
-      <img class="bottom-cloud" src="images/cloud_paint.png" alt="An image of a cloud.">
+      <img id="bottom_cloud" onclick="hideImageBottom()" class="bottom-cloud" src="images/cloud_paint.png" alt="An image of a cloud.">
     </section>
 
     <div class="spacer layer1"></div>
@@ -261,7 +266,7 @@
     <section class="middle">
       <div class="middle-container">
         <div class="profile">
-          <img src="selfies/CV_1.png" alt="Cartoon profile image of me.">
+          <img id="selfie" onclick="playAudio()" src="selfies/CV_1.png" alt="Cartoon profile image of me.">
           <h2>Hello</h2>
           <p class="intro">"I am one of the roughs, a kosmos."</p>
           <p class="intro">My long-term goal is to become a goalkeeper.</p>
@@ -321,6 +326,7 @@
         <!-- NOTE: <a class="footer-link" href="https://www.appbrewery.co/">Website</a> -->
         <p class="copyright">
           © Jouni Rantanen
+            <!-- NOTE: timestamp the copyright -->
             <script type="text/javascript">
               var thedate = new Date();
               document.write(thedate.getFullYear());
@@ -329,5 +335,43 @@
       </div>
 
     </section>
+
+    <script>
+      let count = 0;
+      const soundEffects = ['sounds/chick_chirping.m4a', 'sounds/cats_meaowing.m4a', 'sounds/dogs_barking.m4a',
+       'sounds/lion_growl.m4a', 'sounds/sputnik.m4a', 'sounds/train_passing.m4a']
+      var randNum = Math.floor(Math.random() * 6);
+      var audio0 = new Audio(soundEffects[randNum]);
+      var audio1 = new Audio(soundEffects[randNum]);
+
+      // NOTE: Play random audio snippet if the profile image is clicked.
+      function playAudio() {
+          if (count == 0) {
+            //console.log(count)
+            audio1.pause()
+            audio1.setCurrentTime = 0;
+            audio0.play()
+            count = 1;
+            randNum = Math.floor(Math.random() * 6);
+            audio1 = new Audio(soundEffects[randNum]);
+          } else {
+            //console.log(count)
+            audio0.pause()
+            audio0.setCurrentTime = 0;
+            audio1.play()
+            count = 0;
+            randNum = Math.floor(Math.random() * 6);
+            audio0 = new Audio(soundEffects[randNum]);
+        }
+      }
+
+      // NOTE: Hide a cloud if  a cloud is clicked.
+       function hideImageTop() {
+       document.getElementById("top_cloud").style.visibility = "hidden";
+      }
+       function hideImageBottom() {
+       document.getElementById("bottom_cloud").style.visibility = "hidden";
+      }
+    </script>
   </body>
 </html>
