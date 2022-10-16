@@ -8,7 +8,6 @@
     <title>Personal Site Of Jouni Rantanen</title>
     <link rel="icon" href="favicon.ico">
 
-    <!-- NOTE: <link rel="stylesheet" href="css/styles.css"> -->
     <!--
     font-family: 'Merriweather Sans', sans-serif;
     font-family: 'Montserrat', sans-serif;
@@ -21,44 +20,19 @@
     <!-- NOTE: CSS stylesheet -->
     <style>
 
-      h1 {
-        color: #255AD9;
-        /*font-size: 562.5%; /* NOTE: 100% = 1 em = 16px */
-        font-size: 5.625rem; /* NOTE: rem is not affected by changes and inheritance */
-        margin: 50px auto 0 auto;
-        font-family: 'Sacramento', cursive;
-      }
-
-      h2 {
-        color: rgb(96,152,255);
-        /* NOTE: color: #255AD9; */
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2.5rem;
-        font-weight: normal;
-
-      }
-
-      h3 {
-        color: #6098ff;
-        /* NOTE: color: #255AD9; */
-        font-size: 1.5rem;
-        font-family: 'Montserrat', sans-serif;
+      body {
+        background-color: background-color: rgb(96 152 255);
+        color: white;
+        margin: 0;
+        text-align: center;
+        font-family: "Merriweather", serif;
+        overflow-x: hidden;
       }
 
       p {
         font-size: 1.5rem;
         line-height: 2;
         font-family: 'Montserrat', sans-serif;
-      }
-
-      body {
-        background-color: background-color: rgb(96 152 255);
-        /* NOTE: background-color: rgb(0,76,187); */
-        color: white;
-        margin: 0;
-        text-align: center;
-        font-family: "Merriweather", serif;
-        overflow-x: hidden;
       }
 
       section {
@@ -70,6 +44,28 @@
         padding-top: 100px;
       }
 
+      h1 {
+        color: #255AD9;
+        /*font-size: 562.5%; /* NOTE: 100% = 1 em = 16px */
+        font-size: 5.625rem; /* NOTE: rem is not affected by changes and inheritance */
+        margin: 50px auto 0 auto;
+        font-family: 'Sacramento', cursive;
+      }
+
+      h2 {
+        color: rgb(96,152,255);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        font-weight: normal;
+
+      }
+
+      h3 {
+        color: #6098ff;
+        font-size: 1.5rem;
+        font-family: 'Montserrat', sans-serif;
+      }
+
       a {
         color: rgb(96,152,255);
         font-family: 'Montserrat', sans-serif;
@@ -77,7 +73,7 @@
         text-decoration: none;
       }
 
-      /* NOTE: Change the color of the link in hover state */
+      /* NOTE: Change the color of the link in hover state to white */
       a:hover {
         color: #EAF6F6;
       }
@@ -94,7 +90,6 @@
         margin: 40px auto 60px;
       }
 
-      /* SVG background image via https://haikei.app/ */
       .spacer {
         /* Use the aspect ratio of the svg-image */
         aspect-ratio: 960/300;
@@ -102,36 +97,37 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        /* NOTE:   transform: translateY(-2px) rotate(180deg); */
+
       }
 
       .layer1 {
-        /* NOTE: background-image: url('./layer1.svg'); */
-        background-image: url('curves/stacked-waves-haikei-blue.svg');
+        background-image: url('curves/curve1.svg');
+        /* NOTE:   transform: translateY(-2px) rotate(180deg); */
 
       }
       .layer2 {
-        /* NOTE: background-image: url('./layer2.svg'); */
-        background-image: url('curves/stacked-waves-haikei-blue1.svg');
-
+        background-image: url('curves/curve2.svg');
+        /* NOTE:   transform: translateY(-2px) rotate(180deg); */
       }
 
       .layer3 {
-        background-image: url('curves/stacked-waves-haikei-blue2.svg');
+        background-image: url('curves/curve3.svg');
+        /* NOTE: transform: translateY(-2px) rotate(180deg); */
 
       }
 
-      .flip {
-        transform: rotate(180deg);
+      .layer4 {
+        background-image: url('curves/curve4.svg');
+        /* NOTE: transform: translateY(-2px) rotate(180deg); */
       }
-      /* ----- */
-
-      /* Different sections .*/
 
       /* Top */
       .top {
         background: rgb(96,152,255);
         position: relative;
         padding-top: 100px;
+
       }
 
       .top-h2 {
@@ -139,7 +135,6 @@
       }
 
       .top-cloud {
-        /* position: absolute;*/
         position: fixed;
         right: 200px;
         top: 40px;
@@ -147,28 +142,22 @@
       }
 
       .bottom-cloud {
-        /*position: absolute;*/
         position: fixed;
         left: 160px;
         bottom: 470px;
         z-index: 1;
       }
-      /* ----- */
 
       /* Middle */
-
       .middle {
         background: rgb(0,76,187);
-        /* margin: 100px 0; */
+        padding: 10px 0 20px;
       }
 
       .skill-row {
         width: 50%;
-        /*margin: 100px auto 100px auto;*/
         margin: auto;
-        /*text-align: left;*/
       }
-      /* ----- */
 
       /* Bottom */
       .bottom {
@@ -179,9 +168,6 @@
       .get-in-touch {
         color: #255AD9;
       }
-      /* ----- */
-
-      /* ----- */
 
       /* The footer box */
       .bottom-container {
@@ -200,7 +186,6 @@
         font-size: 0.75rem;
         margin: 10px 0;
       }
-      /* ----- */
 
       /* Button */
       .btn {
@@ -213,12 +198,12 @@
         -webkit-border-radius: 20;
         -moz-border-radius: 20;
         border-radius: 20px;
-        font-family: Arial;
+        font-family: "Montserrat";
         color: #ffffff;
         font-size: 15px;
         padding: 10px 20px 10px 20px;
         text-decoration: none;
-        /* NOTE: Add box shadow */
+        /* NOTE: Add box shadow ? */
         /* NOTE: box-shadow: 0px 0px 12px 1px #ffffff; */
       }
 
@@ -230,12 +215,10 @@
         background-image: -o-linear-gradient(top, #2D77FF, #4988FF);
         background-image: linear-gradient(to bottom, #2D77FF, #4988FF);
         text-decoration: none;
-        /* NOTE: Add box shadow*/
+        /* NOTE: Add box shadow ? */
         /* NOTE: box-shadow: 0px 0px 0px 0px #ffffff; */
       }
 
-
-      /* NOTE: Add link to work experience?  */
       .book-title {
         color: #EAF6F6;
         font-size: 1.5rem;
@@ -250,86 +233,91 @@
         margin: 20px auto;
       }
 
-
     </style>
   </head>
 
   <body>
     <!-- NOTE: Top section. -->
     <section class="top">
+
       <img id="top_cloud" onclick="hideImageTop()" class="top-cloud" src="images/cloud_paint.png" alt="An image of a cloud.">
       <h1> I'm Jouni </h1>
         <h2 class="top-h2"> I enjoy planning for the betterment of all mankind </h2>
       <img id="bottom_cloud" onclick="hideImageBottom()" class="bottom-cloud" src="images/cloud_paint.png" alt="An image of a cloud.">
+
     </section>
 
     <div class="spacer layer1"></div>
 
     <!-- NOTE: MIddle section. -->
     <section class="middle">
-      <div class="middle-container">
-        <div class="profile">
-          <img id="selfie" onclick="playAudio()" src="selfies/CV_1.png" alt="Cartoon profile image of me.">
-          <h2>Hello</h2>
-          <p class="intro">"I am one of the roughs, a kosmos."</p>
-          <p class="intro">My long-term goal is to become a goalkeeper.</p>
-        </div>
-        <hr>
-        <div class="skills">
-          <h2>My Skills</h2>
-            <div class="skill-row">
-              <img class="" src="" alt="">
-              <h3>(We Don't Neeed No) Education</h3>
-                <p><a href="https://www.utu.fi/fi">University of Turku</a>  Classics</p>
-                <p><a href="https://www.helsinki.fi/fi">University of Helsinki</a>  Computer Science</p>
-                <p><a href="https://www.aalto.fi/fi">Aalto University</a>  Electronics</p>
-            </div>
-            <div class="skill-row">
-              <img class="" src="" alt="">
-              <h3>Work Experience</h3>
-                <p>1981-present</p>
-                <p>Executive Chairman and CEO</p>
-                <!-- NOTE:  <p>The Life And Opinions Of Jouni Rantanen, Gentleman</p>-->
-                <p> <a class="book-title" href="https://play.google.com/books/reader?id=UOBRAQAAMAAJ&pg=GBS.PP1">The Life And Opinions Of Jouni Rantanen, Gentleman</a></p>
-            </div>
-            <br>
-            <hr class="hobbies">
-            <div class="skill-row">
-              <img class="" src="" alt="">
-              <h3>My Hobbies</h3>
-                <a href="hobbies.html">iPad Sketching</a>
-            </div>
-            <br>
+        <div class="middle-container">
+          <div class="profile">
+            <img id="selfie" onclick="playAudio()" src="selfies/CV_1.png" alt="Cartoon profile image of me.">
+            <h2>Hello</h2>
+            <p class="intro">"I am one of the roughs, a kosmos."</p>
+            <p class="intro">My long-term goal is to become a goalkeeper.</p>
           </div>
-        </div>
+          <hr>
+          <div class="skills">
+            <h2>My Skills</h2>
+              <div class="skill-row">
+                <img class="" src="" alt="">
+                <h3>(We Don't Neeed No) Education</h3>
+                  <p><a href="https://www.utu.fi/fi">University of Turku</a>  Classics</p>
+                  <p><a href="https://www.helsinki.fi/fi">University of Helsinki</a>  Computer Science</p>
+                  <p><a href="https://www.aalto.fi/fi">Aalto University</a>  Electronics</p>
+              </div>
+              <div class="skill-row">
+                <img class="" src="" alt="">
+                <h3>Work Experience</h3>
+                  <p>1981-present</p>
+                  <p>Executive Chairman and CEO</p>
+                  <!-- NOTE:  <p>The Life And Opinions Of Jouni Rantanen, Gentleman</p>-->
+                  <p> <a class="book-title" href="https://play.google.com/books/reader?id=UOBRAQAAMAAJ&pg=GBS.PP1">The Life And Opinions Of Jouni Rantanen, Gentleman</a></p>
+              </div>
+              <br>
+              <hr class="hobbies">
+              <div class="skill-row">
+                <img class="" src="" alt="">
+                <h3>My Hobbies</h3>
+                  <a href="hobbies.html">iPad Sketching</a>
+                  <br>
+              </div>
+            </div>
+          </div>
     </section>
 
-    <div class="spacer layer2 flip"></div>
+   <div class="spacer layer4"></div>
 
     <!-- NOTE: Bottom section. -->
     <section class="bottom">
-      <div class="contact-me">
-        <h2 class="get-in-touch">Get In Touch</h2>
-        <h3 class="get-in-touch">If you are not just sleeping and dreaming of the moon.</h3>
-        <p>Let's talk about how we can improve things and make everything work for us and all of our friends.</p>
-        <hr>
-        <br>
-        <a class="btn" href="mailto:ounijay@proton.me">CONTACT ME</a>
-        <!-- NOTE: <br><br><br><br> -->
-      </div>
+        <div class="contact-me">
+          <h2 class="get-in-touch">Get In Touch</h2>
+          <h3 class="get-in-touch">If you are not just sleeping and dreaming of the moon.</h3>
+          <p>Let's talk about how we can improve things and make everything work for us and all of our friends.</p>
+          <hr>
+          <!-- NOTE: Add PayPal donate button. -->
+          <a class="btn" href="mailto:ounijay@proton.me">CONTACT ME</a>
+          <br><br>
+          <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <input type="hidden" name="hosted_button_id" value="S4NYTRJ7W7DZY" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_FI/i/scr/pixel.gif" width="1" height="1" />
+          </form>
+          <br>
+        </div>
     </section>
 
-    <div class="spacer layer3"></div>
+    <div class="spacer layer2"></div>
 
     <!-- NOTE: Bottom container. -->
     <section class="bottom-container">
       <div>
         <a class="footer-link" href="https://www.linkedin.com/in/jouni-rantanen-855638194/">LinkedIn</a>
-        <!-- NOTE:  <a class="footer-link" href="https://twitter.com/">Twitter</a>-->
-        <!-- NOTE: <a class="footer-link" href="https://www.appbrewery.co/">Website</a> -->
         <p class="copyright">
           © Jouni Rantanen
-            <!-- NOTE: timestamp the copyright -->
+            <!-- NOTE: Timestamp the copyright -->
             <script type="text/javascript">
               var thedate = new Date();
               document.write(thedate.getFullYear());
@@ -340,7 +328,7 @@
     </section>
 
     <script>
-      let count = 0;
+      let toggle = 0;
       const soundEffects = ['sounds/chick_chirping.m4a', 'sounds/cats_meaowing.m4a', 'sounds/dogs_barking.m4a',
        'sounds/lion_growl.m4a', 'sounds/sputnik.m4a', 'sounds/train_passing.m4a']
       var randNum = Math.floor(Math.random() * 6);
@@ -349,20 +337,20 @@
 
       // NOTE: Play random audio snippet if the profile image is clicked.
       function playAudio() {
-          if (count == 0) {
-            //console.log(count)
+          if (toggle == 0) {
+            //console.log(toggle)
             audio1.pause()
             audio1.setCurrentTime = 0;
             audio0.play()
-            count = 1;
+            toggle = 1;
             randNum = Math.floor(Math.random() * 6);
             audio1 = new Audio(soundEffects[randNum]);
           } else {
-            //console.log(count)
+            //console.log(toggle)
             audio0.pause()
             audio0.setCurrentTime = 0;
             audio1.play()
-            count = 0;
+             = 0;
             randNum = Math.floor(Math.random() * 6);
             audio0 = new Audio(soundEffects[randNum]);
         }
